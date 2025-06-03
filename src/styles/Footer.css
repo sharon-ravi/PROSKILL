@@ -1,0 +1,275 @@
+/* src/styles/Footer.css - Modern Dark Theme */
+.footer-modern-dark {
+  background-color: #0C0C0C; /* Very dark, almost black */
+  color: #ffffff;
+  padding: 60px 0 0 0; /* Top padding, bottom bar handles its own */
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Common modern font */
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-modern-content-wrapper {
+  max-width: 1200px; /* Or your preferred container width */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-modern-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px; /* Gap between main columns */
+  margin-bottom: 40px;
+}
+
+.footer-modern-column {
+  flex: 1;
+  min-width: 250px; /* Min width before columns wrap */
+}
+
+.footer-modern-column h3 {
+  font-size: 20px;
+  font-weight: 600; /* Bolder headings */
+  margin-top: 0;
+  margin-bottom: 25px;
+  color: #ffffff;
+}
+
+.subscribe-section p {
+  color: #a0a0a0; /* Lighter grey for paragraph text */
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.subscribe-form .form-group {
+  margin-bottom: 20px;
+}
+
+.subscribe-form input[type="email"] {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #555555; /* Underline for input */
+  color: #ffffff;
+  padding: 10px 0;
+  width: 100%;
+  font-size: 16px;
+  outline: none;
+}
+.subscribe-form input[type="email"]::placeholder {
+  color: #777777;
+}
+.subscribe-form input[type="email"]:focus {
+  border-bottom-color: #ffffff;
+}
+
+.recaptcha-placeholder {
+  background-color: #f9f9f9; /* Standard reCAPTCHA background */
+  border: 1px solid #d3d3d3;
+  border-radius: 3px;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  color: #000; /* Text inside reCAPTCHA is dark */
+}
+.recaptcha-placeholder input[type="checkbox"]{
+    width: 24px;
+    height: 24px;
+    accent-color: #1a73e8; /* Google blue */
+}
+
+.google-rating-badge-placeholder {
+  margin-top: 20px;
+  /* Style this to look like the badge in your image */
+  /* You'll likely need an actual image for this */
+}
+.google-rating-badge-placeholder img {
+    /* Temporary styling for the placeholder image, adjust as needed */
+    display: block; /* Or inline-block */
+}
+
+
+.links-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.links-section ul li {
+  margin-bottom: 12px;
+}
+
+.links-section ul li a {
+  color: #a0a0a0; /* Lighter grey for links */
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.2s ease;
+}
+
+.links-section ul li a:hover {
+  color: #ffffff; /* White on hover */
+}
+
+
+.footer-modern-socials-cta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    border-top: 1px solid #2a2a2a;
+    border-bottom: 1px solid #2a2a2a;
+    margin-bottom: 40px;
+}
+
+.socials-group {
+    display: flex;
+    align-items: center;
+}
+.socials-group h3 {
+    margin: 0 20px 0 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+.socials-group a {
+    color: #ffffff;
+    font-size: 22px; /* Adjust for icons */
+    margin-right: 15px;
+    text-decoration: none;
+    /* Basic styling for text fallback */
+    border: 1px solid transparent;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+.socials-group a:hover {
+    opacity: 0.8;
+}
+
+
+.subscribe-button {
+  background-color: #ffffff;
+  color: #0C0C0C; /* Dark text on white button */
+  border: none;
+  padding: 12px 25px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  letter-spacing: 0.5px;
+}
+
+.subscribe-button:hover {
+  background-color: #e0e0e0; /* Slightly off-white hover */
+}
+
+
+.footer-modern-bottom-bar {
+  padding: 25px 0;
+  /* No separate background, inherits from main footer */
+}
+
+.footer-modern-bottom-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.copyright-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Gap between copyright and links */
+  align-items: center;
+  font-size: 13px;
+  color: #777777; /* Dimmed text for this section */
+}
+
+.copyright-links a {
+  color: #777777;
+  text-decoration: none;
+}
+.copyright-links a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.payment-icons-modern {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between payment icons */
+}
+
+.payment-icons-modern img {
+  height: 24px; /* Adjust as needed */
+  filter: grayscale(100%) brightness(1.5); /* Makes them look white/greyish */
+  opacity: 0.7;
+}
+
+.sr-only { /* For accessibility, hide label visually but keep for screen readers */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+  .footer-modern-main {
+    gap: 30px;
+  }
+  .footer-modern-column {
+     /* Allow two columns on tablet */
+    min-width: calc(50% - 20px);
+    flex-basis: calc(50% - 20px);
+  }
+  .subscribe-section { /* Subscribe section might take full width or stay 50% */
+    min-width: calc(50% - 20px);
+    flex-basis: calc(50% - 20px);
+  }
+}
+
+
+@media (max-width: 767px) {
+  .footer-modern-main {
+    flex-direction: column; /* Stack all main columns */
+    gap: 40px;
+  }
+  .footer-modern-column {
+    min-width: 100%;
+    flex-basis: 100%;
+  }
+  .footer-modern-socials-cta {
+    flex-direction: column;
+    align-items: flex-start; /* Align items to start when stacked */
+    gap: 20px;
+  }
+  .subscribe-button {
+    width: 100%; /* Full width button on mobile */
+    text-align: center;
+  }
+  .footer-modern-bottom-content {
+    flex-direction: column;
+    align-items: center; /* Center bottom bar content */
+    text-align: center;
+  }
+  .copyright-links {
+    justify-content: center; /* Center copyright links */
+    margin-bottom: 15px;
+  }
+  .payment-icons-modern {
+    justify-content: center; /* Center payment icons */
+  }
+}

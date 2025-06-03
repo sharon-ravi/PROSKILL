@@ -1,0 +1,74 @@
+/* src/styles/main.css */
+body {
+  margin: 0;
+  /* Proskill seems to use 'Montserrat' and 'Open Sans' or similar system fonts */
+  font-family: 'Montserrat', 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffff; /* Proskill main background is white */
+  color: #666666; /* Common text color */
+  line-height: 1.6;
+  font-size: 14px; /* Base font size */
+}
+
+/* ... (rest of main.css from previous example) ... */
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex-grow: 1;
+}
+
+/* Basic responsive considerations (you'll need more) */
+@media (max-width: 991px) { /* Proskill seems to have a breakpoint around here */
+  .header-container {
+    flex-direction: column;
+    align-items: center; /* Center items when stacked */
+  }
+  .main-navigation {
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center nav items */
+    flex-wrap: wrap;
+  }
+  .main-navigation a {
+    margin: 5px 10px;
+  }
+  .header-actions {
+    margin-top: 15px;
+    width: 100%;
+    justify-content: center;
+  }
+  .search-bar {
+    max-width: 300px; /* Limit width */
+  }
+  .shop-layout {
+    flex-direction: column;
+  }
+  .shop-sidebar {
+    margin-bottom: 30px;
+    width: 100%; /* Full width on mobile */
+  }
+  .footer-container {
+    flex-direction: column;
+    text-align: center; /* Center footer columns on mobile */
+  }
+  .footer-column {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Smaller cards on mobile */
+    }
+    .shop-header-area h1 {
+        font-size: 2em;
+    }
+}

@@ -1,0 +1,143 @@
+/* src/styles/ProductCardWithVariants.css */
+.p-card {
+  border: 1px solid #e9e9e9;
+  background-color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  overflow: hidden; /* Important for image zoom */
+}
+
+.p-card:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-color: #dddddd;
+}
+
+.p-card-image-link {
+  display: block;
+  text-decoration: none;
+}
+
+.p-card-image-container {
+  width: 100%;
+  padding-top: 100%; /* 1:1 Aspect Ratio. Adjust if images are different */
+  position: relative;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.p-card-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Or cover, depending on your images */
+  transition: transform 0.3s ease;
+}
+
+.p-card:hover .p-card-image {
+  transform: scale(1.05);
+}
+
+.p-card-info {
+  padding: 15px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.p-card-color-swatches {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 10px;
+  min-height: 22px; /* Ensure space even if no swatches */
+}
+
+.color-swatch {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  padding: 0;
+  position: relative; /* For out-of-stock slash */
+  outline: none;
+}
+.color-swatch.selected {
+  border-color: #000;
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #000; /* Outline effect */
+}
+.color-swatch.out-of-stock {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.swatch-oos-slash { /* Diagonal line for out-of-stock */
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    width: 80%;
+    height: 1px;
+    background-color: red;
+    transform: translateY(-50%) rotate(45deg);
+    transform-origin: center;
+}
+.color-swatch.out-of-stock .swatch-oos-slash {
+    background-color: #555;
+}
+
+
+.p-card-name {
+  font-size: 15px;
+  color: #333333;
+  font-weight: 600;
+  margin: 5px 0 10px 0;
+  line-height: 1.4;
+  min-height: 42px; /* Approx 2 lines */
+  text-decoration: none;
+}
+.p-card-info a:hover .p-card-name { /* If name is wrapped in Link */
+    color: #e8117f;
+}
+
+
+.p-card-price {
+  font-size: 16px;
+  font-weight: 700;
+  color: #333333;
+  margin: 0 0 15px 0;
+}
+
+.p-card-button {
+  background-color: #000000; /* Black button like Proskill */
+  color: white;
+  border: 1px solid #000000;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.p-card-button:hover {
+  background-color: #333333;
+}
+
+.sr-only { /* For accessibility */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

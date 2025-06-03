@@ -1,0 +1,37 @@
+/* src/styles/RelatedProducts.css */
+.related-products-section {
+  margin-top: 50px;
+  padding-top: 30px;
+  border-top: 1px solid #eee;
+}
+
+.related-products-section h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  text-align: center; /* Or left, depending on style */
+  color: #333;
+}
+
+.related-products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); /* Usually 3-4 related products */
+  gap: 20px;
+}
+
+/* Responsive adjustments for related products grid */
+@media (max-width: 768px) {
+  .related-products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+@media (max-width: 576px) {
+  .related-products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); /* Can go to 2 columns or 1 */
+     /* Or for single column display on very small screens:
+     grid-template-columns: 1fr; */
+  }
+   .related-products-section h2 {
+    font-size: 20px;
+  }
+}

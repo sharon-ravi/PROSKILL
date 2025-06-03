@@ -1,0 +1,126 @@
+/* src/styles/Header.css */
+
+/* Original styles for other pages (like /shop) can remain here */
+.site-header {
+  background-color: #fff;
+  border-bottom: 1px solid #eeeeee;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+/* ... (all your previous .site-header, .header-container, .main-navigation, etc. styles) ... */
+
+
+/* Styles for the NEW HOMEPAGE HEADER */
+.site-header-homepage {
+  background-color: #000000; /* Black background */
+  color: #ffffff;
+  padding: 15px 0; /* Adjust padding */
+  box-shadow: none; /* Proskill homepage header is flat */
+  border-bottom: none; /* No border */
+}
+
+.header-container-homepage {
+  max-width: 1170px; /* Or your preferred max-width */
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-group-homepage {
+  display: flex;
+  align-items: center;
+}
+
+.proskill-logo-link {
+  display: block; /* Removes any underline from Link */
+}
+
+.proskill-logo-header {
+  height: 35px; /* Adjust as needed */
+  margin-right: 15px; /* Space between logos */
+  /* If using a dark SVG that needs to be white:
+     filter: invert(1) brightness(2); (crude way, better to have a white SVG)
+  */
+}
+
+.mascot-logo-header {
+  height: 25px; /* Adjust as needed */
+  opacity: 0.8; /* Mascot logo is slightly less prominent */
+}
+
+.header-actions-homepage {
+  display: flex;
+  align-items: center;
+}
+
+.icon-button-homepage {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 22px; /* Adjust icon size */
+  cursor: pointer;
+  padding: 8px;
+  margin-left: 10px;
+}
+
+.icon-button-homepage:hover {
+  opacity: 0.8;
+}
+
+.menu-toggle-icon {
+  /* display: none; /* Initially hidden on desktop, shown on mobile */
+}
+
+.mobile-navigation-homepage {
+  display: none; /* Hidden by default, shown on mobile when toggled */
+  background-color: #111111; /* Slightly lighter than header black */
+  padding: 15px;
+  position: absolute;
+  top: 100%; /* Position below the header */
+  left: 0;
+  right: 0;
+  z-index: 999;
+  flex-direction: column;
+  border-top: 1px solid #333;
+}
+
+.mobile-navigation-homepage a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 12px 15px;
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  border-bottom: 1px solid #2a2a2a;
+}
+.mobile-navigation-homepage a:last-child {
+  border-bottom: none;
+}
+
+.mobile-navigation-homepage a:hover,
+.mobile-navigation-homepage a.active {
+  background-color: #e8117f; /* Proskill Pink for active/hover */
+}
+
+
+/* Responsive for homepage header and mobile menu */
+@media (max-width: 768px) {
+  /* .header-actions-homepage .search-icon {
+    display: none; You might choose to hide search or handle it differently
+  } */
+  .menu-toggle-icon {
+    display: block; /* Ensure it's always visible or managed by JS */
+  }
+
+  .site-header-homepage.mobile-menu-is-open .mobile-navigation-homepage {
+     /* This class would be added to site-header-homepage when menu is open */
+    display: flex;
+  }
+  /* OR directly control display via JS state like in the example component */
+  /* This CSS would be if you toggle a class on the header itself */
+}

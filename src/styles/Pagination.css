@@ -1,0 +1,88 @@
+/* src/styles/Pagination.css */
+.pagination-nav {
+  display: flex;
+  justify-content: center; /* Center the pagination block */
+  margin-top: 40px; /* Space above the pagination */
+  margin-bottom: 20px; /* Space below */
+}
+
+.pagination {
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+  border-radius: 0.25rem; /* Optional: slight rounding for the container */
+}
+
+.page-item {
+  margin: 0 3px; /* Space between page items */
+}
+
+.page-item .page-link {
+  position: relative;
+  display: block;
+  padding: 0.65rem 0.95rem; /* Padding inside each page link button */
+  line-height: 1.25;
+  color: #666666; /* Default link color - matches ProSkill text */
+  background-color: #fff;
+  border: 1px solid #dddddd; /* Border color for page links */
+  text-decoration: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  min-width: 40px; /* Ensure buttons have a decent minimum width */
+  text-align: center;
+}
+
+.page-item .page-link:hover {
+  z-index: 2;
+  color: #e8117f; /* ProSkill Pink Accent on hover */
+  background-color: #f7f7f7; /* Light background on hover */
+  border-color: #cccccc;
+}
+
+.page-item .page-link:focus {
+  z-index: 3;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(232, 17, 127, 0.25); /* Focus ring with ProSkill Pink */
+}
+
+.page-item.active .page-link {
+  z-index: 3;
+  color: #fff; /* White text for active page */
+  background-color: #e8117f; /* ProSkill Pink Accent for active page background */
+  border-color: #e8117f; /* ProSkill Pink Accent for active page border */
+  font-weight: 700;
+}
+
+.page-item.disabled .page-link {
+  color: #adb5bd; /* Greyed out color for disabled items */
+  pointer-events: none; /* Disable click events */
+  background-color: #fff;
+  border-color: #dddddd;
+  opacity: 0.7;
+}
+
+/* Optional: Specific styling for Previous/Next buttons if desired */
+.page-item:first-child .page-link {
+  /* border-top-left-radius: 0.25rem; */ /* If you want rounded corners for the group */
+  /* border-bottom-left-radius: 0.25rem; */
+}
+
+.page-item:last-child .page-link {
+  /* border-top-right-radius: 0.25rem; */
+  /* border-bottom-right-radius: 0.25rem; */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 576px) {
+  .page-item .page-link {
+    padding: 0.5rem 0.75rem; /* Slightly smaller padding on mobile */
+    font-size: 13px;
+    min-width: 35px;
+  }
+
+  .pagination-nav {
+    margin-top: 30px;
+  }
+}

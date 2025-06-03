@@ -1,0 +1,68 @@
+/* src/styles/Sidebar.css */
+.shop-sidebar {
+  flex-basis: 270px; /* Fixed width for sidebar, like Proskill */
+  flex-shrink: 0;
+  /* Proskill doesn't seem to have a background or border for the sidebar container itself, but for groups within */
+}
+
+.filter-group {
+  margin-bottom: 30px;
+  border: 1px solid #eeeeee; /* Border around each filter group */
+  padding: 20px;
+  background-color: #fff; /* White background for filter groups */
+}
+
+.filter-group h4 {
+  font-size: 16px; /* Slightly larger filter titles */
+  font-weight: 600;
+  margin-top: 0; /* Remove default margin */
+  margin-bottom: 15px;
+  color: #333333;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f0f0f0; /* Lighter border under title */
+  text-transform: capitalize;
+}
+
+.category-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.category-list li {
+  padding: 8px 0;
+  cursor: pointer;
+  color: #666666;
+  font-size: 14px;
+  transition: color 0.2s ease, padding-left 0.2s ease;
+  position: relative;
+}
+
+.category-list li:hover,
+.category-list li.active {
+  color: #e8117f; /* ProSkill Pink Accent */
+  /* font-weight: bold; */ /* Proskill doesn't seem to make it bold, but shifts it */
+  padding-left: 10px; /* Indent on hover/active */
+}
+.category-list li.active::before { /* Little indicator */
+    content: '»';
+    position: absolute;
+    left: 0;
+    color: #e8117f;
+}
+
+
+.price-slider {
+    width: 100%;
+    margin-top: 10px;
+    /* Styling range inputs is notoriously tricky and browser-specific */
+    /* You might need a library for a custom slider that matches ProSkill's */
+    accent-color: #e8117f; /* Tries to color the thumb and track */
+}
+.price-range-values {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 5px;
+}

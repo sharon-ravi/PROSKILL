@@ -1,0 +1,82 @@
+/* src/styles/ProductFilterSidebar.css */
+.product-filter-sidebar {
+  flex: 0 0 260px; /* Fixed width for sidebar, doesn't grow, doesn't shrink */
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  height: fit-content; /* So it doesn't stretch full page height */
+  font-family: 'Open Sans', sans-serif;
+}
+
+.product-filter-sidebar h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #e7e7e7;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+.accordion-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+
+.accordion-title {
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 10px 0;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #333;
+}
+.accordion-title:hover {
+    color: #e8117f;
+}
+
+.accordion-title span { /* For + / - icon */
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.accordion-content {
+  padding-top: 5px;
+}
+
+.accordion-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.accordion-content ul li {
+  padding: 6px 5px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #555;
+  border-radius: 3px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.accordion-content ul li:hover {
+  background-color: #f0f0f0;
+  color: #e8117f;
+}
+.accordion-content ul li.active-filter-option {
+  font-weight: bold;
+  color: #e8117f;
+  background-color: #e6f2ff; /* Light blue to indicate active */
+}

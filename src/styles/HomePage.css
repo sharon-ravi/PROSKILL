@@ -1,0 +1,80 @@
+/* src/styles/HomePage.css */
+.homepage-container {
+  padding-bottom: 40px;
+}
+
+.page-header-area {
+  max-width: 1170px; /* Or your standard container width */
+  margin: 0 auto 30px auto;
+  padding: 20px 15px 0 15px;
+}
+
+.breadcrumbs {
+  font-size: 14px;
+  color: #555555;
+  margin-bottom: 10px;
+}
+
+.breadcrumb-shop-text {
+  color: #e8117f;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.page-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #111111;
+  margin: 0;
+}
+
+/* RENAMED for clarity, though the name doesn't strictly matter now */
+.category-grid-container {
+  max-width: 1170px; /* Or your standard container width for content alignment */
+  margin: 0 auto;      /* Center the grid container */
+  padding: 20px 15px; /* Padding around the grid */
+  /* REMOVE overflow-x: auto; */
+  /* REMOVE -webkit-overflow-scrolling: touch; */
+  /* REMOVE scrollbar hiding styles */
+}
+
+.category-grid {
+  display: grid;
+  /* Define columns: auto-fill will create as many columns as fit,
+     minmax defines the minimum and maximum width of each column.
+     Adjust 280px to control how many cards fit per row. */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px; /* Space between category cards */
+  /* REMOVE flex properties like flex-direction, flex-wrap, padding-right */
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) { /* Tablet */
+  .category-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) { /* Smaller tablet / large mobile */
+  .page-title {
+    font-size: 36px;
+  }
+  .category-grid-container {
+    padding: 15px 10px;
+  }
+  .category-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 576px) { /* Mobile */
+  .category-grid {
+    /* Switch to 2 columns or 1 column on very small screens if desired */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Might result in 2 columns */
+    /* Or for a single column: */
+    /* grid-template-columns: 1fr; */
+    gap: 15px;
+  }
+}
